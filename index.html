@@ -1,0 +1,148 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Simple Photo Gallery  </title>
+
+<style type="text/css">
+body {
+	background: rgb(60, 60, 63);
+	color: rgb(247, 182, 4);
+	margin-top: 20px;
+	font-family: monospace;
+	font-weight: bold;
+}
+a {
+	color: #FFF;
+}
+a:hover {
+	color: yellow;
+	text-decoration: underline;
+}
+.thumbnails img {
+	height: 80px;
+	border: 4px solid #555;
+	padding: 1px;
+	margin: 0 10px 10px 0;
+}
+
+.thumbnails img:hover {
+	border: 4px solid #00ccff;
+	cursor: pointer;
+}
+
+.preview img {
+	border: 4px solid #444;
+	padding: 1px;
+	width: 750px;
+}
+.click { 
+	padding:20px ;
+	color: rgb(171, 117, 241);
+	font-size: 22px;
+}
+#e-mail{
+	color:antiquewhite; 
+	text-decoration: underline;
+}
+#ul {
+	text-align: left;
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="gallery" align="center">
+	<h2 style="text-decoration: underline;font-size: 30px;" >Endangered Animals Photos Gallery</h2>
+	<MARQUEE> 
+			<p style="color:aliceblue">Created by LOAY & RAMI</p>
+		 </MARQUEE>
+	
+
+	<br>
+
+	<div class="thumbnails">
+		<a href="https://en.wikipedia.org/wiki/Siberian_tiger">
+		<img onmouseover="preview.src=img1.src" name="img1" src="images/img1.jpg" alt="img1"/></a>
+		<a href="https://en.wikipedia.org/wiki/Bonobo">
+		<img onmouseover="preview.src=img2.src" name="img2" src="images/img2.jpg" alt="img2"/></a>
+		<a href="https://en.wikipedia.org/wiki/Giant_panda">
+		<img onmouseover="preview.src=img3.src" name="img3" src="images/img3.jpg" alt="img3"/></a>
+		<a href="https://en.wikipedia.org/wiki/Mountain_gorilla">
+		<img onmouseover="preview.src=img4.src" name="img4" src="images/img4.jpg" alt="img4"/></a>
+		<a href="https://en.wikipedia.org/wiki/Black_rhinoceros">
+		<img onmouseover="preview.src=img5.src" name="img5" src="images/img5.jpg" alt="img5"/></a>
+		<a href="https://en.wikipedia.org/wiki/Sea_turtle">
+		<img onmouseover="preview.src=img6.src" name="img6" src="images/img6.jpg" alt="img6"/></a>
+		<a href="https://en.wikipedia.org/wiki/Orangutan">
+		<img onmouseover="preview.src=img7.src" name="img7" src="images/img7.jpg" alt="img7"/></a>
+		<a href="https://en.wikipedia.org/wiki/Fin_whale">
+		<img onmouseover="preview.src=img8.src" name="img8" src="images/img8.jpg" alt="img8"/></a>
+		<a href="https://en.wikipedia.org/wiki/Asian_elephant">
+		<img onmouseover="preview.src=img9.src" name="img9" src="images/img9.jpg" alt="img9"/></a>
+		<a href="https://www.worldwildlife.org/species/amur-tiger">
+		<img onmouseover="preview.src=img10.src" name="img10" src="images/img10.jpg" alt="img10"/></a>
+		<a href="https://en.wikipedia.org/wiki/Rose-ringed_parakeet">
+		<img onmouseover="preview.src=img11.src" name="img11" src="images/img11.jpg" alt="img11"/></a>
+		<a href="https://en.wikipedia.org/wiki/Philippine_eagle">
+		<img onmouseover="preview.src=img12.src" name="img12" src="images/img12.jpg" alt="img12"/></a>
+		<a href="https://en.wikipedia.org/wiki/White_tiger">
+		<img onmouseover="preview.src=img13.src" name="img13" src="images/img13.jpg" alt="img13"/></a>
+		
+
+	</div></br>
+
+	<div class="preview" align="center">
+		<img name="preview" src="images/img1.jpg" alt=""/>
+	</div>
+	<footer class="click">
+			for more wonderful photos 
+			<a href="https://www.shutterstock.com/photos" >
+				 click here
+			</a>
+			<p>For any inquiry contact us via e-mail:</p><p id="e-mail">rami_maalouf98@yahoo.com  ,  loaybib@gmail.com </p>  
+		<div id="contact-form">  
+			<h1></h1>
+			<h2></h2>  
+			<p id="failure"></p>  
+			<p id="success"></p>  
+			<form method="post" action="emailForm.php" id="ul">
+				<ul >
+					<div style="float:left"> 
+					<li>
+			            <p> <label for="name">Name: <span class="required">*</span></label>  
+			             <input type="text" id="name" name="name" value="" placeholder="Your name" required="required" autofocus="autofocus" />  
+			   </li>
+				<li>	
+			        <p>  <label for="email">Email Address: <span class="required">*</span></label>  
+			         <input type="email" id="email" name="email" value="" placeholder="your@email.com" required="required" />  </p>
+			</li>
+			<li>
+                <p>  <label for="Age">Age: </label>  
+                  <input type="number" id="Age" name="Age"  placeholder="Age" min="1" max="110" required> </p> 
+				</li>	</div>
+				<div style="float:right"><li>
+                    <p>   <label for="subject">Subject: </label>  
+			          <select id="subject" name="subject"> </p>
+				</li>  
+				  <option value="hello">Endangered Aanimals</option>
+				  <option value="quote">WWF</option>  
+				  <option value="general">General</option>   
+			   </select>  
+					<li>
+						<p> <label for="message">Suggestions: <span class="required">*</span></label>  
+			   <textarea id="message" name="message" placeholder="Write your Suggestions here, please." required="required"></textarea>  </p>
+			</li> 
+			   <button type="submit" value="submit" id="submit" style="background-color:rgb(97, 223, 240);border-radius: 20px; height: 30px;" >Submit</button> 
+			</div></ul>
+			</form>
+		 </div>
+	</footer>
+</div>
+
+
+</body>
+</html>
